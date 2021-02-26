@@ -1,5 +1,6 @@
 package co.utb.dev.moviesapp;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -32,7 +33,7 @@ public class MoviesApp {
         Movie movie = new Movie(title, releaseDate, director, rating);
         System.out.println(movie.toString());
         //Guardar la información de la película en un archivo
-        MovieService movieService = new FileMovieService("src/movies.data");
+        MovieService movieService = new FileMovieService("src/co/utb/dev/moviesapp/resources/movies.data");
         boolean success = movieService.saveMovie(movie);
         if (success) {
             System.out.println("Success!");
