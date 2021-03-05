@@ -8,6 +8,8 @@ public class Movie {
     private String director;
     private int rating;
 
+    public Movie(){}
+
     public Movie(String title, Date releaseDate, String director, int rating) {
         this.title = title;
         this.releaseDate = releaseDate;
